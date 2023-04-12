@@ -1,4 +1,4 @@
-import 'package:f10/editor.dart';
+import 'package:f10/textdocument.dart';
 import 'package:flutter/material.dart';
 
 void main() {
