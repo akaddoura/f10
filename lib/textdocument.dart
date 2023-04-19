@@ -5,9 +5,6 @@ import 'package:flutter/widgets.dart';
 class Editor extends StatefulWidget {
   const Editor({Key? key}) : super(key: key);
 
-  // @override
-  // _EditorState createState() = _EditorState();
-
   @override
   State<Editor> createState() => _EditorState();
 }
@@ -17,11 +14,18 @@ class _EditorState extends State<Editor> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Call me Ishmael."),
-      ),
-      body: Container(),
+    return MaterialApp(
+      home: Scaffold(
+          body: SizedBox(
+              width: double.infinity,
+              height: double.infinity,
+              child: TextField(
+                maxLines: null,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'start writing!',
+                ),
+              ))),
     );
   }
 }
